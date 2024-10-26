@@ -3,101 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xorro Loco Bot</title>
+    <title>Mi Página Interactiva</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3889262940396089"
+        crossorigin="anonymous"></script>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #f0f0f0 50%, #a0d8ef 50%);
+        * {
             margin: 0;
-            padding: 20px;
-            color: #333;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
         }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #e0f2e9;
+        }
+
+        /* Barra superior */
         header {
-            text-align: center;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #007BFF;
-        }
-        .ad-container {
-            margin: 20px 0;
-            text-align: center;
-        }
-        .content {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-        .content:hover {
-            transform: scale(1.02);
-        }
-        button {
-            background-color: #007BFF;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 50px;
+            background-color: #1b5e20;
             color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 20px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-        button:hover {
-            background-color: #0056b3;
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
         }
-        footer {
+
+        .nav-links a {
+            color: #b2ff59;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #76ff03;
+        }
+
+        /* Contenedor principal */
+        .main-container {
+            display: flex;
+            width: 100%;
+            flex: 1;
+            padding-top: 50px;
+        }
+
+        /* Barras laterales */
+        .sidebar {
+            position: fixed;
+            top: 50px;
+            width: 200px;
+            height: calc(100vh - 50px);
+            background-color: #004d40;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
             text-align: center;
+            padding: 10px;
+        }
+
+        .left-sidebar {
+            left: 0;
+        }
+
+        .right-sidebar {
+            right: 0;
+        }
+
+        .sidebar button {
+            background: #66bb6a;
+            border: none;
+            padding: 10px;
+            color: #ffffff;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: background 0.3s ease;
+        }
+
+        .sidebar button:hover {
+            background: #00e676; /* Verde fluorescente */
+            color: #212121;
+        }
+
+        /* Contenido central */
+        .content {
+            margin: 0 auto;
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .content button {
+            background-color: #a5d6a7;
+            color: #1b5e20;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            border: none;
+            cursor: not-allowed;
+            opacity: 0.7;
+            margin-top: 30px;
+        }
+
+        /* Ads Container */
+        .ads-container {
             margin-top: 20px;
-            font-size: 14px;
-            color: #666;
         }
     </style>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3889262940396089"
-            crossorigin="anonymous"></script>
 </head>
 <body>
 
+    <!-- Barra de navegación superior -->
     <header>
-        <h1>Bienvenido a Xorro Loco Bot</h1>
-        <p>¡Diviértete ganando puntos y logros!</p>
-        <button onclick="window.open('https://t.me/XorroLocoBot', '_self')">Abrir Bot</button>
+        <nav class="nav-links">
+            <a href="#">Inicio</a>
+            <a href="#">Sobre Nosotros</a>
+        </nav>
     </header>
 
-    <!-- Espacio para anuncios -->
-    <div class="ad-container">
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-3889262940396089"
-             data-ad-slot="8101120869"  <!-- Reemplaza con tu ad-slot real -->
-             data-ad-format="auto"></ins>
+    <!-- Contenedor principal -->
+    <div class="main-container">
+        <!-- Barra lateral izquierda -->
+        <div class="sidebar left-sidebar">
+            <button>Opción 1</button>
+            <button>Opción 2</button>
+            <button>Opción 3</button>
+        </div>
+
+        <!-- Contenido central -->
+        <div class="content">
+            <h1 style="color: #1b5e20;">Próximamente...</h1>
+            <button disabled>Coming Soon!</button>
+            <div class="ads-container">
+                <!-- Anuncio de Google -->
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-3889262940396089"
+                    data-ad-slot="1234567890"
+                    data-ad-format="auto"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+
+        <!-- Barra lateral derecha -->
+        <div class="sidebar right-sidebar">
+            <button>Opción A</button>
+            <button>Opción B</button>
+            <button>Opción C</button>
+        </div>
     </div>
 
-    <div class="content">
-        <h2>¿Qué es Xorro Loco Bot?</h2>
-        <p>Este es un bot divertido donde puedes ganar puntos y logros. ¡Participa y disfruta de la experiencia!</p>
-        <h2>Instrucciones</h2>
-        <p>Utiliza el bot en Telegram para interactuar. Usa los comandos para explorar todas sus funciones y diviértete.</p>
-    </div>
-
-    <!-- Espacio para anuncios -->
-    <div class="ad-container">
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-3889262940396089"
-             data-ad-slot="8101120869"  <!-- Reemplaza con tu ad-slot real -->
-             data-ad-format="auto"></ins>
-    </div>
-
-    <footer>
-        <p>&copy; 2024 Xorro Loco Bot. Todos los derechos reservados.</p>
-    </footer>
-
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </body>
 </html>
