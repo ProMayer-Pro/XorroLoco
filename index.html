@@ -3,13 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Bot de Telegram</title>
+    <title>XorroLoco Bot</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            padding: 50px;
+            background: #007BFF;
+            color: white;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #007BFF;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .ads {
+            margin: 20px 0;
+            text-align: center;
+        }
+        button {
+            padding: 10px 15px;
+            border: none;
+            background: #28a745;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #218838;
+        }
+    </style>
+    <script>
+        function greetUser() {
+            alert("¡Bienvenido a XorroLoco Bot! ¡Disfruta!");
+        }
+    </script>
 </head>
-<body>
-    <h1>¡Bienvenido a mi Bot de Telegram!</h1>
-    <p>Haz clic en el siguiente botón para abrir el bot en Telegram:</p>
-    <a href="https://t.me/XorroLocoBot" target="_blank">
-        <button style="padding: 10px 20px; font-size: 16px;">Abrir Bot</button>
-    </a>
+<body onload="greetUser()">
+
+<header>
+    <h1>XorroLoco Bot</h1>
+    <p>¡Tu compañero divertido en Telegram!</p>
+</header>
+
+<div class="container">
+    <h2>¿Qué puedes hacer?</h2>
+    <p>Usa el bot para ganar puntos, ver logros y jugar minijuegos.</p>
+    
+    <div class="ads">
+        <h3>Anuncios</h3>
+        <!-- Aquí puedes agregar anuncios de Google AdSense -->
+        <p>[Anuncio de Google AdSense]</p>
+    </div>
+
+    <button onclick="window.open('https://t.me/XorroLocoBot', '_self');">Abrir Bot en Telegram</button>
+</div>
+
+<footer>
+    <p>&copy; 2024 XorroLoco. Todos los derechos reservados.</p>
+</footer>
+
 </body>
 </html>
